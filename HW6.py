@@ -48,15 +48,12 @@ class Parallelogram(Rectangle):
         return self.width * self.height
 
 
-#class Triangle(Shape):
-    #def __init__(self, x, y, z):
-        #super().__init__(x, y)
-        #self.z = z
-       # p = 0
+class Triangle(Shape):
+    def __init__(self, x, y):
+        super().__init__(x, y)
 
-    #def square(self):
-       # p = (self.x + self.y + self.z) / 2
-        #return math.sqrt(p * (p - self.x) * (p - self.y) * (p - self.z))
+    def square(self):
+        return self.x * self.y * 0.5
 
 
 class Scene:
@@ -84,8 +81,8 @@ p = Parallelogram(1, 2, 20, 30, 45)
 p1 = Parallelogram(1, 2, 20, 30, 45)
 str(p1)
 
-#t = Triangle(1, 9, 1)
-#t1 = Triangle(4, 6, 8)
+t = Triangle(1, 9)
+t1 = Triangle(4, 6)
 
 scene = Scene()
 scene.add_figure(r)
@@ -95,7 +92,7 @@ scene.add_figure(c)
 scene.add_figure(c1)
 scene.add_figure(p)
 scene.add_figure(p1)
-#scene.add_figure(t)
-#scene.add_figure(t1)
+scene.add_figure(t)
+scene.add_figure(t1)
 
 print(scene.total_square())
