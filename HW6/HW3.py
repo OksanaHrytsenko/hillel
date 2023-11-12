@@ -96,3 +96,5 @@ scene.add_figure(t)
 scene.add_figure(t1)
 
 print(scene.total_square())
+
+
